@@ -1,5 +1,7 @@
 *,*::before,*::after{
     box-sizing: border-box;
+    cursor:none;
+
 }
 :root{
     --hue:200;
@@ -13,11 +15,11 @@ body{
     overflow: hidden;
 }
 .paddle{
-    --padposition: 50;
+    --position: 50;
     
     position:absolute;
     background-color:var(--foreground-color);
-    top: calc(var(--padposition) * 1vh);
+    top: calc(var(--position) * 1vh);
     transform: translateY(-50%);
     width: 1vh;
     height: 10vh;
@@ -42,10 +44,11 @@ body{
     border-radius:50%;
 }
 .score{
+    padding: 0 2vh;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size:7vh;
+    font-size:6vh;
     color:var(--foreground-color);
 }
 .score > *{
@@ -58,4 +61,9 @@ body{
 .score > :first-child{
     text-align:right;
     border-right: 0.5vh solid var(--foreground-color);
+}
+p{
+    padding: 1vh;
+    margin-top: 85vh;
+    color:var(--foreground-color);
 }
